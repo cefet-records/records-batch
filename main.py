@@ -1,1 +1,0 @@
-print("hello records_batch!")
