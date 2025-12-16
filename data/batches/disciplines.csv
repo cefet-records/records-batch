@@ -1,0 +1,5 @@
+disciplinecode,coursecode,name,syllabus,workload,creditcount
+PRG101,ADS,Introdução à Programação,Conceitos básicos de lógica e algoritmos.,60,4
+BD202,ADS,Banco de Dados II,Modelagem avançada e otimização SQL.,90,6
+ALC301,BCC,Álgebra Linear Computacional,Espaços vetoriais e transformações lineares.,75,5
+SEC401,BCC,Segurança da Informação,Criptografia e políticas de segurança.,90,6
