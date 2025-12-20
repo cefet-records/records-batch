@@ -1,0 +1,31 @@
+disciplinecode,coursecode,name,syllabus,workload,creditcount
+PRG101,ADS,Introdução à Programação,Lógica e algoritmos,60,4
+BD202,ADS,Banco de Dados II,Modelagem e SQL,90,6
+WEB101,ADS,Desenvolvimento Web,HTML CSS e JS,60,4
+EST101,ADS,Estrutura de Dados,Listas pilhas e filas,75,5
+ENG401,ADS,Engenharia de Software,Processos e ciclo de vida,60,4
+RED101,ADS,Redes de Computadores,Protocolos e topologias,60,4
+ALC301,BCC,Álgebra Linear,Matemática vetorial,75,5
+SEC401,BCC,Segurança da Informação,Criptografia e redes,90,6
+BCC101,BCC,Algoritmos Avançados,Grafos e complexidade,90,6
+BCC201,BCC,Inteligência Artificial,Redes neurais e busca,90,6
+BCC301,BCC,Compiladores,Análise sintática e léxica,75,5
+BCC401,BCC,Teoria da Computação,Autómatos e Turing,60,4
+DIR101,DIR,Direito Civil,Introdução ao direito,60,4
+DIR102,DIR,Direito Penal,Teoria do crime,60,4
+DIR201,DIR,Direito Constitucional,Controle de constitucionalidade,90,6
+DIR301,DIR,Direito Administrativo,Regime jurídico,75,5
+DIR401,DIR,Direito do Trabalho,Relações laborais,60,4
+DIR501,DIR,Ética Jurídica,Deontologia,45,3
+ADM101,ADM,Gestão de Pessoas,Recursos humanos,60,4
+ADM202,ADM,Contabilidade Geral,Balanço e DRE,75,5
+ADM301,ADM,Marketing,Estratégia e mercado,60,4
+ADM401,ADM,Logística,Cadeia de suprimentos,60,4
+ADM501,ADM,Empreendedorismo,Modelos de negócio,60,4
+ENG101,ENG,Cálculo I,Limites e derivadas,90,6
+ENG102,ENG,Física I,Mecânica clássica,90,6
+ENG201,ENG,Cálculo II,Integrais e séries,90,6
+ENG301,ENG,Engenharia de Requisitos,UML e User Stories,60,4
+ENG402,ENG,Probabilidade e Estatística,Distribuições e amostragem,75,5
+ENG501,ENG,Arquitetura de Sistemas,Microserviços e Cloud,90,6
+ENG601,ENG,Gestão de Projetos,PMBOK e Agile,60,4

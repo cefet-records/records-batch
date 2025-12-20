@@ -1,0 +1,101 @@
+disciplinecode,coursecode,name,syllabus,workload,creditcount
+PRG101,ADS,Introdução à Programação,Lógica e algoritmos,60,4
+BD202,ADS,Banco de Dados II,Modelagem e SQL,90,6
+WEB101,ADS,Desenvolvimento Web,HTML CSS e JS,60,4
+EST101,ADS,Estrutura de Dados,Listas pilhas e filas,75,5
+ENG401,ADS,Engenharia de Software,Processos e ciclo de vida,60,4
+RED101,ADS,Redes de Computadores,Protocolos e topologias,60,4
+SO101,ADS,Sistemas Operacionais,Gestão de memória e processos,60,4
+POO201,ADS,Programação Orientada a Objetos,Classes e herança,75,5
+SEG101,ADS,Segurança de Dados,Criptografia básica,60,4
+MOBILE1,ADS,Desenvolvimento Mobile,Android e iOS,90,6
+ALC301,BCC,Álgebra Linear,Matemática vetorial,75,5
+SEC401,BCC,Segurança da Informação,Criptografia e redes,90,6
+BCC101,BCC,Algoritmos Avançados,Grafos e complexidade,90,6
+BCC201,BCC,Inteligência Artificial,Redes neurais e busca,90,6
+BCC301,BCC,Compiladores,Análise sintática e léxica,75,5
+BCC401,BCC,Teoria da Computação,Autómatos e Turing,60,4
+CALC1,BCC,Cálculo Diferencial,Limites e derivadas,90,6
+FIS1,BCC,Física para Computação,Mecânica clássica,60,4
+GRAF1,BCC,Teoria dos Grafos,Algoritmos de caminhos,60,4
+PARAD1,BCC,Paradigmas de Programação,Funcional e lógico,60,4
+ENG101,ENG,Cálculo I,Limites e derivadas,90,6
+ENG102,ENG,Física I,Mecânica clássica,90,6
+ENG201,ENG,Cálculo II,Integrais e séries,90,6
+ENG301,ENG,Engenharia de Requisitos,UML e User Stories,60,4
+ENG402,ENG,Probabilidade e Estatística,Distribuições e amostragem,75,5
+ENG501,ENG,Arquitetura de Sistemas,Microserviços e Cloud,90,6
+ENG601,ENG,Gestão de Projetos,PMBOK e Agile,60,4
+ENG701,ENG,Qualidade de Software,Testes e métricas,60,4
+ENG801,ENG,DevOps,CI/CD e automação,60,4
+ENG901,ENG,Manutenção de Software,Refatoração e legado,60,4
+ADM101,ADM,Gestão de Pessoas,Recursos humanos,60,4
+ADM202,ADM,Contabilidade Geral,Balanço e DRE,75,5
+ADM301,ADM,Marketing,Estratégia e mercado,60,4
+ADM401,ADM,Logística,Cadeia de suprimentos,60,4
+ADM501,ADM,Empreendedorismo,Modelos de negócio,60,4
+ADM601,ADM,Finanças Corporativas,Capital de giro e investimentos,75,5
+ADM701,ADM,Planejamento Estratégico,Matriz SWOT e metas,60,4
+ADM801,ADM,Ética Empresarial,Responsabilidade social,45,3
+ADM901,ADM,Comércio Exterior,Exportação e importação,60,4
+ADM999,ADM,Liderança,Teoria de grupos,45,3
+DIR101,DIR,Direito Civil,Introdução ao direito,60,4
+DIR102,DIR,Direito Penal,Teoria do crime,60,4
+DIR201,DIR,Direito Constitucional,Controle de constitucionalidade,90,6
+DIR301,DIR,Direito Administrativo,Regime jurídico,75,5
+DIR401,DIR,Direito do Trabalho,Relações laborais,60,4
+DIR501,DIR,Ética Jurídica,Deontologia,45,3
+DIR601,DIR,Direito Processual,Ritos e prazos,75,5
+DIR701,DIR,Direito Ambiental,Legislação de proteção,60,4
+DIR801,DIR,Direito Tributário,Impostos e taxas,75,5
+DIR901,DIR,Direito Internacional,Tratados e acordos,60,4
+MED101,MED,Anatomia Humana,Sistemas e órgãos,120,8
+MED201,MED,Fisiologia,Funcionamento do corpo,90,6
+MED301,MED,Patologia,Estudo de doenças,90,6
+MED401,MED,Farmacologia,Drogas e interações,75,5
+MED501,MED,Bioética,Dilemas médicos,45,3
+MED601,MED,Pediatria,Saúde da criança,90,6
+MED701,MED,Ginecologia,Saúde da mulher,90,6
+MED801,MED,Cardiologia,Sistema circulatório,90,6
+MED901,MED,Neurologia,Sistema nervoso,90,6
+MED999,MED,Psiquiatria,Saúde mental,90,6
+ARQ101,ARQ,Desenho Técnico,Perspectiva e escala,60,4
+ARQ201,ARQ,História da Arte,Movimentos artísticos,60,4
+ARQ301,ARQ,Urbanismo I,Planejamento urbano,90,6
+ARQ401,ARQ,Estruturas de Aço,Cálculo estrutural,75,5
+ARQ501,ARQ,Conforto Térmico,Ventilação e isolamento,60,4
+ARQ601,ARQ,Paisagismo,Espaços verdes,60,4
+ARQ701,ARQ,Sustentabilidade,Materiais ecológicos,60,4
+ARQ801,ARQ,Projetos Residenciais,Planta e corte,90,6
+ARQ901,ARQ,Revitalização Humana,Patrimônio histórico,75,5
+ARQ999,ARQ,Iluminação,Luz natural e artificial,60,4
+BIO101,BIO,Genética,Hereditariedade,75,5
+BIO201,BIO,Botânica,Reino vegetal,60,4
+BIO301,BIO,Zoologia,Reino animal,60,4
+BIO401,BIO,Ecologia,Ecossistemas,60,4
+BIO501,BIO,Microbiologia,Bactérias e vírus,75,5
+BIO601,BIO,Biologia Marinha,Vida nos oceanos,60,4
+BIO701,BIO,Bioquímica,Processos químicos,75,5
+BIO801,BIO,Evolução,Teoria Darwinista,60,4
+BIO901,BIO,Imunologia,Sistema de defesa,60,4
+BIO999,BIO,Paleontologia,Fósseis e evolução,60,4
+MAT101,MAT,Cálculo Avançado,Múltiplas variáveis,90,6
+MAT201,MAT,Geometria Analítica,Vetores e retas,75,5
+MAT301,MAT,Teoria dos Números,Primos e divisibilidade,60,4
+MAT401,MAT,Análise Real,Sequências e séries,75,5
+MAT501,MAT,Equações Diferenciais,Modelos físicos,75,5
+MAT601,MAT,Topologia,Espaços métricos,60,4
+MAT701,MAT,Estatística Aplicada,Inferência e dados,75,5
+MAT801,MAT,Álgebra Abstrata,Grupos e anéis,60,4
+MAT901,MAT,Matemática Financeira,Juros e anuidades,60,4
+MAT999,MAT,Criptografia Matemática,RSA e Curvas,60,4
+PSI101,PSI,Psicologia Geral,Introdução e história,60,4
+PSI201,PSI,Psicologia Social,Comportamento de grupos,60,4
+PSI301,PSI,Psicanálise,Teoria Freudiana,75,5
+PSI401,PSI,Psicopatologia,Distúrbios mentais,90,6
+PSI501,PSI,Neuropsicologia,Cérebro e comportamento,75,5
+PSI601,PSI,Psicologia do Desenvolvimento,Infância e velhice,60,4
+PSI701,PSI,Testes Psicológicos,Avaliação e métodos,60,4
+PSI801,PSI,Psicologia Organizacional,Trabalho e empresas,60,4
+PSI901,PSI,Terapia Cognitiva,TCC e comportamento,60,4
+PSI999,PSI,Fenomenologia,Existencialismo,45,3
