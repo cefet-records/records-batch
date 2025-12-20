@@ -1,0 +1,12 @@
+{"timestamp":"2025-12-20T02:47:09.682125Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-20T02:47:09.683073Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/grades_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-20T02:47:09.724135Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/grades_dag.py","lineno":6,"logger":"py.warnings"}
+{"timestamp":"2025-12-20T02:47:09.724342Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/grades_dag.py","lineno":6,"logger":"py.warnings"}
+{"timestamp":"2025-12-20T02:47:09.741506Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-20T02:47:09.741901Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-20T02:47:09.742164Z","level":"info","event":"Current task name:ensure_table","logger":"task.stdout"}
+{"timestamp":"2025-12-20T02:47:09.742406Z","level":"info","event":"Dag name:batch_grades_pipeline","logger":"task.stdout"}
+{"timestamp":"2025-12-20T02:47:09.763166Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-12-20T02:47:09.777220Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-20T02:47:09.777562Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-20T02:47:09.781835Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): ensure_table>","logger":"task.stdout"}

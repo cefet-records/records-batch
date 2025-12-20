@@ -20,41 +20,33 @@ def batch_students_pipeline():
         return df.to_dict(orient="records")
 
     @task
-    def ensure_batch_table():
+    def ensure_table():
         pg = PostgresHook(postgres_conn_id="postgres_default")
         conn = pg.get_conn()
         cur = conn.cursor()
-        
+
         cur.execute(
             """
-                CREATE TABLE IF NOT EXISTS batch_students (
+                CREATE TABLE IF NOT EXISTS students (
                     id SERIAL PRIMARY KEY,
-        
                     student_address VARCHAR(42) NOT NULL,
-                    institution_address VARCHAR(42) NOT NULL,
-        
-                    processed BOOLEAN DEFAULT FALSE,
-                    tx_hash TEXT,
-        
-                    created_at TIMESTAMP DEFAULT NOW(),
-                    processed_at TIMESTAMP
+                    institution_address VARCHAR(42) NOT NULL
                 );
                 """
-            )
-        
+        )
+
         conn.commit()
 
     @task
-    def write_to_postgres(records):
+    def write_to_table(records):
         pg = PostgresHook(postgres_conn_id="postgres_default")
         conn = pg.get_conn()
         cur = conn.cursor()
 
         for r in records:
-            # No students, você não tem `semester`, então adicione a lógica correta aqui
             cur.execute(
                 """
-                INSERT INTO batch_students
+                INSERT INTO students
                 (student_address, institution_address)
                 VALUES (%s,%s)
             """,
@@ -68,8 +60,10 @@ def batch_students_pipeline():
         return True
 
     records = load_file()
-    ensure_batch_table()
-    write_to_postgres(records)
+    ensure = ensure_table()
+    write = write_to_table(records)
+
+    records >> ensure >> write
 
 
 pipeline = batch_students_pipeline()

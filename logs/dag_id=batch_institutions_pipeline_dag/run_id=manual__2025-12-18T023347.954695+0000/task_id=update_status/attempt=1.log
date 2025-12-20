@@ -1,0 +1,15 @@
+{"timestamp":"2025-12-18T02:33:59.561394Z","level":"warning","event":"The `airflow.hooks.base.BaseHook` attribute is deprecated. Please use `'airflow.sdk.bases.hook.BaseHook'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/plugins/web3_client.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2025-12-18T02:34:00.310174Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-18T02:34:00.311073Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/institution_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-18T02:34:00.580608Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/institution_dag.py","lineno":6,"logger":"py.warnings"}
+{"timestamp":"2025-12-18T02:34:00.580754Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/institution_dag.py","lineno":6,"logger":"py.warnings"}
+{"timestamp":"2025-12-18T02:34:00.638205Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-18T02:34:00.638543Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-18T02:34:00.638802Z","level":"info","event":"Current task name:update_status","logger":"task.stdout"}
+{"timestamp":"2025-12-18T02:34:00.639007Z","level":"info","event":"Dag name:batch_institutions_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2025-12-18T02:34:00.640671Z","level":"info","event":"ROWS: [{'id': 1, 'name': 'CEFET-RJ', 'institution_address': '0x9f69a815356bafce6a4f819d1b92bc26bfa053ae'}, {'id': 2, 'name': 'Universidade Mock', 'institution_address': '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'}]","logger":"task.stdout"}
+{"timestamp":"2025-12-18T02:34:00.641104Z","level":"info","event":"TX_HASHES: ['0x06a0720d0f02d23c2bb62fd6f1e7cc1108ec4284847d0aea0ad82850e3859b26', '0x5f3d28b0599be9336ce5246b097125f034960a08ba46bbab5ce2cca7cfc74a91']","logger":"task.stdout"}
+{"timestamp":"2025-12-18T02:34:00.658314Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-12-18T02:34:00.672608Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-18T02:34:00.672939Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-18T02:34:00.673203Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): update_status>","logger":"task.stdout"}

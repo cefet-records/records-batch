@@ -1,0 +1,13 @@
+{"timestamp":"2025-12-17T22:00:23.115894Z","level":"warning","event":"The `airflow.hooks.base.BaseHook` attribute is deprecated. Please use `'airflow.sdk.bases.hook.BaseHook'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/plugins/web3_client.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T22:00:23.796769Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-17T22:00:23.797849Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/institution_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-17T22:00:24.114963Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/institution_dag.py","lineno":6,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T22:00:24.115141Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/institution_dag.py","lineno":6,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T22:00:24.156538Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T22:00:24.157030Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-17T22:00:24.157400Z","level":"info","event":"Current task name:send_to_blockchain","logger":"task.stdout"}
+{"timestamp":"2025-12-17T22:00:24.157676Z","level":"info","event":"Dag name:batch_institutions_pipeline_dag","logger":"task.stdout"}
+{"timestamp":"2025-12-17T22:00:24.158646Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-12-17T22:00:24.177507Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T22:00:24.177896Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-17T22:00:24.178240Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): send_to_blockchain>","logger":"task.stdout"}

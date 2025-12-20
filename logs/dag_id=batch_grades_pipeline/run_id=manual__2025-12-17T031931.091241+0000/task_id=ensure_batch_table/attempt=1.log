@@ -1,0 +1,13 @@
+{"timestamp":"2025-12-17T03:19:32.136935Z","level":"warning","event":"The `airflow.hooks.base.BaseHook` attribute is deprecated. Please use `'airflow.sdk.bases.hook.BaseHook'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/plugins/web3_client.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T03:19:32.951801Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-17T03:19:32.952728Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/grades_dag.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-17T03:19:33.297733Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/grades_dag.py","lineno":21,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T03:19:33.297912Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/grades_dag.py","lineno":21,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T03:19:33.324105Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T03:19:33.324469Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-17T03:19:33.324801Z","level":"info","event":"Current task name:ensure_batch_table","logger":"task.stdout"}
+{"timestamp":"2025-12-17T03:19:33.325039Z","level":"info","event":"Dag name:batch_grades_pipeline","logger":"task.stdout"}
+{"timestamp":"2025-12-17T03:19:33.341781Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-12-17T03:19:33.373828Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T03:19:33.374197Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-17T03:19:33.374496Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): ensure_batch_table>","logger":"task.stdout"}

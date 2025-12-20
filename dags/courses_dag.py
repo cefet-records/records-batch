@@ -1,4 +1,3 @@
-# dags/batch_courses_dag.py
 import pandas as pd
 import pendulum
 from airflow.decorators import dag, task
@@ -21,25 +20,19 @@ def batch_courses_pipeline():
         return df.to_dict(orient="records")
 
     @task
-    def ensure_batch_table():
+    def create_table():
         pg = PostgresHook(postgres_conn_id="postgres_default")
         conn = pg.get_conn()
         cur = conn.cursor()
 
         cur.execute(
             """
-            CREATE TABLE IF NOT EXISTS batch_courses (
+            CREATE TABLE IF NOT EXISTS courses (
                 id SERIAL PRIMARY KEY,
                 code VARCHAR(10) NOT NULL,
                 name VARCHAR(255) NOT NULL,
                 course_type VARCHAR(50) NOT NULL,
-                number_of_semesters SMALLINT NOT NULL,
-
-                processed BOOLEAN DEFAULT FALSE,
-                tx_hash TEXT,
-
-                created_at TIMESTAMP DEFAULT NOW(),
-                processed_at TIMESTAMP
+                number_of_semesters SMALLINT NOT NULL
             );
             """
         )
@@ -47,7 +40,7 @@ def batch_courses_pipeline():
         conn.commit()
 
     @task
-    def write_to_postgres(records):
+    def write_to_table(records):
         pg = PostgresHook(postgres_conn_id="postgres_default")
         conn = pg.get_conn()
         cur = conn.cursor()
@@ -55,7 +48,7 @@ def batch_courses_pipeline():
         for r in records:
             cur.execute(
                 """
-                INSERT INTO batch_courses
+                INSERT INTO courses
                 (code, name, course_type, number_of_semesters)
                 VALUES (%s, %s, %s, %s)
                 """,
@@ -71,8 +64,10 @@ def batch_courses_pipeline():
         return True
 
     records = load_file()
-    ensure_batch_table()
-    write_to_postgres(records)
+    ensure = create_table()
+    write = write_to_table(records)
+
+    records >> ensure >> write
 
 
 pipeline = batch_courses_pipeline()
