@@ -100,6 +100,8 @@ services:
     restart: always
     ports:
       - "5432:5432"
+    networks:
+      - infra-net
 
   redis:
     # Redis is limited to 7.2-bookworm due to licencing change
@@ -114,6 +116,8 @@ services:
       retries: 50
       start_period: 30s
     restart: always
+    networks:
+      - infra-net
 
   airflow-apiserver:
     <<: *airflow-common
@@ -127,6 +131,8 @@ services:
       retries: 5
       start_period: 30s
     restart: always
+    networks:
+      - infra-net
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -142,6 +148,8 @@ services:
       retries: 5
       start_period: 30s
     restart: always
+    networks:
+      - infra-net
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -161,6 +169,8 @@ services:
       retries: 5
       start_period: 30s
     restart: always
+    networks:
+      - infra-net
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -184,6 +194,8 @@ services:
       # See https://airflow.apache.org/docs/docker-stack/entrypoint.html#signal-propagation
       DUMB_INIT_SETSID: "0"
     restart: always
+    networks:
+      - infra-net
     depends_on:
       <<: *airflow-common-depends-on
       airflow-apiserver:
@@ -205,6 +217,8 @@ services:
       retries: 5
       start_period: 30s
     restart: always
+    networks:
+      - infra-net
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -335,6 +349,8 @@ services:
       retries: 5
       start_period: 30s
     restart: always
+    networks:
+      - infra-net
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -342,3 +358,7 @@ services:
 
 volumes:
   postgres-db-volume:
+
+networks:
+  infra-net:
+    external: true
