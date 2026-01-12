@@ -1,9 +1,15 @@
 import pandas as pd
 import pendulum
+import tempfile
 from airflow.decorators import dag, task
 from airflow.providers.postgres.hooks.postgres import PostgresHook
+from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-FILE_PATH = "/opt/airflow/data/batches/students.csv"
+S3_BUCKET = os.getenv("BUCKET_NAME")
+S3_KEY = "uploads/students.csv"
 
 
 @dag(
@@ -15,9 +21,25 @@ FILE_PATH = "/opt/airflow/data/batches/students.csv"
 def batch_students_pipeline():
     @task
     def load_file():
-        df = pd.read_csv(FILE_PATH)
+        s3 = S3Hook(aws_conn_id="aws_default")
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            local_file = s3.download_file(
+                key=S3_KEY,
+                bucket_name=S3_BUCKET,
+                local_path=tmp_dir,
+            )
+
+            df = pd.read_csv(
+                local_file,
+                sep=",",
+                engine="python",
+                encoding="utf-8", # troque para latin1 se der erro
+            )
+
         df.columns = [c.strip().lower() for c in df.columns]
         return df.to_dict(orient="records")
+
 
     @task
     def ensure_table():

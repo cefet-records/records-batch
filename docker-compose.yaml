@@ -67,9 +67,10 @@ x-airflow-common: &airflow-common
     AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: "true"
     # WARNING: Use _PIP_ADDITIONAL_REQUIREMENTS option ONLY for a quick checks
     # for other purpose (development, test and especially production usage) build/extend Airflow image.
-    _PIP_ADDITIONAL_REQUIREMENTS: web3>=7.0.0 pandas openpyxl psycopg2-binary
+    _PIP_ADDITIONAL_REQUIREMENTS: web3>=7.0.0 pandas openpyxl psycopg2-binary apache-airflow-providers-amazon
     # The following line can be used to set a custom config file, stored in the local config folder
     AIRFLOW_CONFIG: "/opt/airflow/config/airflow.cfg"
+    BUCKET_NAME: "records-batch-s3-bucket"
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
@@ -100,8 +101,8 @@ services:
     restart: always
     ports:
       - "5432:5432"
-    networks:
-      - infra-net
+    # networks:
+    #   - infra-net
 
   redis:
     # Redis is limited to 7.2-bookworm due to licencing change
@@ -116,8 +117,8 @@ services:
       retries: 50
       start_period: 30s
     restart: always
-    networks:
-      - infra-net
+    # networks:
+    #   - infra-net
 
   airflow-apiserver:
     <<: *airflow-common
@@ -131,8 +132,8 @@ services:
       retries: 5
       start_period: 30s
     restart: always
-    networks:
-      - infra-net
+    # networks:
+    #   - infra-net
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -148,8 +149,8 @@ services:
       retries: 5
       start_period: 30s
     restart: always
-    networks:
-      - infra-net
+    # networks:
+    #   - infra-net
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -169,8 +170,8 @@ services:
       retries: 5
       start_period: 30s
     restart: always
-    networks:
-      - infra-net
+    # networks:
+    #   - infra-net
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -194,8 +195,8 @@ services:
       # See https://airflow.apache.org/docs/docker-stack/entrypoint.html#signal-propagation
       DUMB_INIT_SETSID: "0"
     restart: always
-    networks:
-      - infra-net
+    # networks:
+    #   - infra-net
     depends_on:
       <<: *airflow-common-depends-on
       airflow-apiserver:
@@ -217,8 +218,8 @@ services:
       retries: 5
       start_period: 30s
     restart: always
-    networks:
-      - infra-net
+    # networks:
+    #   - infra-net
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -313,7 +314,7 @@ services:
       _AIRFLOW_WWW_USER_CREATE: "true"
       _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
       _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
-      _PIP_ADDITIONAL_REQUIREMENTS: web3>=7.0.0 pandas openpyxl psycopg2-binary
+      _PIP_ADDITIONAL_REQUIREMENTS: web3>=7.0.0 pandas openpyxl psycopg2-binary apache-airflow-providers-amazon
 
     user: "0:0"
 
@@ -349,8 +350,8 @@ services:
       retries: 5
       start_period: 30s
     restart: always
-    networks:
-      - infra-net
+    # networks:
+    #   - infra-net
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -359,6 +360,6 @@ services:
 volumes:
   postgres-db-volume:
 
-networks:
-  infra-net:
-    external: true
+# networks:
+#   infra-net:
+#     external: true
