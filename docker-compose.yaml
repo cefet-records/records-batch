@@ -91,6 +91,8 @@ services:
     restart: always
     ports:
       - "8000:8000"   # opcional (só se quiser acessar do host)
+    environment:
+      BUCKET_NAME: ${BUCKET_NAME}
     volumes:
       - ./data:/data
     depends_on:
